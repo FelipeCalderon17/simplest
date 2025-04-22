@@ -7,7 +7,6 @@ import { UserAlreadyExists } from "../../../../domain/errors/User/UserAlreadyExi
 
 export class HandleUserError {
   static readonly handleError = (error: UserExceptions, res: Response) => {
-    //TODO:: HACER EL MANEJADOR DE ERRORES
     if (
       error instanceof InvalidPassword ||
       error instanceof UserNotExists ||

@@ -38,8 +38,7 @@ export class UserController {
           .catch((error) => HandleUserError.handleError(error, res));
       })
       .catch((error) => {
-        const err = error as Error; //TODO:: CREAR EL LOG PERZONALIDAO
-        //log.error(error);
+        const err = error as Error;
         res.status(StatusCodes.BAD_REQUEST).json({ message: err.message });
       });
   };
@@ -58,7 +57,7 @@ export class UserController {
           .catch((error) => HandleUserError.handleError(error, res));
       })
       .catch((error) => {
-        const err = error as Error; //TODO:: CREAR EL LOG PERZONALIDAO
+        const err = error as Error;
         res.status(StatusCodes.BAD_REQUEST).json({ message: err.message });
       });
   };

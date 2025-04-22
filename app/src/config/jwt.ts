@@ -19,8 +19,6 @@ export function verifyToken(token: string): JwtPayload | null {
     const decoded = jwt.verify(token, JWT_SECRET) as JwtPayload;
     return decoded;
   } catch (error) {
-    //TODO:: METER EL LOG
-    // Puedes agregar un logger aquí si lo deseas
     console.error("Token inválido o expirado:", error);
     return null;
   }
